@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:48:07 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/06 02:58:45 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/07 01:39:15 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 PhoneBook::PhoneBook(void) // constructor
 {
-	//std::cout << "PhoneBook is created" << std::endl;
+	// std::cout << "PhoneBook is created" << std::endl;
 	this->count = 0;
 	this->index = 0;
 }
 PhoneBook::~PhoneBook(void)
 {
-	//std::cout << "PhoneBook is cleaned" << std::endl;
+	// std::cout << "PhoneBook is cleaned" << std::endl;
 	return ;
 }
 void PhoneBook::set_phonebook(Contact contact)
@@ -36,6 +36,15 @@ static std::string line()
 	std::string x;
 	for (int i = 0; i < 45; i++)
 		x += '-';
+	return (x);
+}
+static std::string display(std::string x)
+{
+	if (x.size() > 10)
+	{
+		x = x.substr(0, 9);
+		x += '.';
+	}
 	return (x);
 }
 void PhoneBook::print_list(void)
@@ -54,7 +63,7 @@ void PhoneBook::print_list(void)
 	while (++i <= this->count - 1)
 	{
 		j = i + 1;
-		std::cout << "|" << std::setw(10) << j << "|" << std::setw(10) << this->l_contact[i].getter("NAME") << "|" << std::setw(10) << this->l_contact[i].getter("LASTNAME") << "|" << std::setw(10) << this->l_contact[i].getter("NICKNAME") << "|" << std::endl;
+		std::cout << "|" << std::setw(10) << j << "|" << std::setw(10) << display(this->l_contact[i].getter("NAME")) << "|" << std::setw(10) << display(this->l_contact[i].getter("LASTNAME")) << "|" << std::setw(10) << display(this->l_contact[i].getter("NICKNAME")) << "|" << std::endl;
 		std::cout << line() << std::endl;
 	}
 }
@@ -69,5 +78,5 @@ void PhoneBook::print_one(int idx)
 
 int PhoneBook::listsize(void)
 {
-	return(this->count);
+	return (this->count);
 }
