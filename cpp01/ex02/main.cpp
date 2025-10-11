@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 08:40:17 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/08 21:13:54 by iarslan          ###   ########.fr       */
+/*   Created: 2025/10/11 00:46:27 by iarslan           #+#    #+#             */
+/*   Updated: 2025/10/11 00:46:35 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-void Zombie::announce(void)
+int main(void)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void Zombie::setName(std::string name)
-{
-	this->name = name;
+	
 }
