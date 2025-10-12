@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:14 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 00:34:02 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 01:48:52 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ int	main(void)
 			{
 				if(!std::getline(std::cin, input))
 					return 0;
-				x = std::atoi(input.c_str());
-				if (input.length() != 1 || !isdigit(input[0]) || x == 9)
-					std::cout << "Please enter values from 0-8: ";
-				else if (x > pb.listsize())
+				x = input[0] - '0';
+				if (input.length() != 1 || !isdigit(input[0]) || input.empty() || input[0] == '9')
+					std::cout << "Please enter values from 0-8 (0 for exit): ";
+				else if (x > pb.listsize() || x < 0 )
 					std::cout << "There is no index " << x << " in the list. Please try again: ";
 				else
 					break ;
