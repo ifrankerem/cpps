@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:14 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/06 03:16:39 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/11 22:52:03 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Please type one of these commands 'ADD' 'SEARCH' 'EXIT'" << std::endl;
-		std::getline(std::cin, command);
+		if(!std::getline(std::cin,command))
+			break;
 		// if (command.empty())
 		// 	continue ; buraya bak bazen menü 2 defa basılıyor!!!
 		if (command == "ADD")
@@ -32,7 +33,8 @@ int	main(void)
 			std::string temp;
 			std::cout << "Please write infos about who u wanna add in the phonebook!" << std::endl;
 			std::cout << "Name: ";
-			contact.set_firstname();
+			if(contact.set_firstname() == -1)
+				return 0;
 			std::cout << "LastName: ";
 			contact.set_lastname();
 			std::cout << "Nickname: ";
@@ -49,7 +51,8 @@ int	main(void)
 			std::cout << "Enter index of contact to display,if you want to exit please type 0 : ";
 			while (1)
 			{
-				std::getline(std::cin, input);
+				if(!std::getline(std::cin, input))
+					return 0;
 				x = std::atoi(input.c_str());
 				if (input.length() != 1 || !isdigit(input[0]) || x == 9)
 					std::cout << "Please enter values from 0-8: ";

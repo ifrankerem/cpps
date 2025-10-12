@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:47 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/06 02:58:02 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/11 22:51:37 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Contact::~Contact(void)
 	return ;
 }
 
-void Contact::set_firstname()
+int Contact::set_firstname()
 {
 	int	error_flag;
 
@@ -40,15 +40,17 @@ void Contact::set_firstname()
 			std::cout << "This section cant be empty!" << std::endl;
 			std::cout << "Name: ";
 		}
-		std::getline(std::cin, first_name);
-		if (first_name.size() != 0)
+		if(!std::getline(std::cin, first_name))
+			return -1;
+		else if (first_name.size() != 0)
 			break ;
 		else
 			error_flag = 1;
 	}
+	return 0;
 }
 
-void Contact::set_lastname()
+int Contact::set_lastname()
 {
 	int	error_flag;
 
@@ -60,15 +62,17 @@ void Contact::set_lastname()
 			std::cout << "This section cant be empty!" << std::endl;
 			std::cout << "LastName: ";
 		}
-		std::getline(std::cin, last_name);
-		if (last_name.size() != 0)
+		if(!std::getline(std::cin, last_name))
+			return -1;
+		else if (first_name.size() != 0)
 			break ;
 		else
 			error_flag = 1;
 	}
+	return 0;
 }
 
-void Contact::set_nickname()
+int Contact::set_nickname()
 {
 	int	error_flag;
 
@@ -80,15 +84,17 @@ void Contact::set_nickname()
 			std::cout << "This section cant be empty!" << std::endl;
 			std::cout << "Nickname: ";
 		}
-		std::getline(std::cin, nickname);
-		if (nickname.size() != 0)
+		if(!std::getline(std::cin, nickname))
+			return -1;
+		else if (first_name.size() != 0)
 			break ;
 		else
-			error_flag = 1;
+			error_flag = 1;;
 	}
+	return 0;
 }
 
-void Contact::set_number()
+int Contact::set_number()
 {
 	int	error_flag;
 
@@ -100,15 +106,17 @@ void Contact::set_number()
 			std::cout << "This section cant be empty!" << std::endl;
 			std::cout << "Phone Number: ";
 		}
-		std::getline(std::cin, phone_number);
-		if (phone_number.size() != 0)
+		if(!std::getline(std::cin, phone_number))
+			return -1;
+		else if (first_name.size() != 0)
 			break ;
 		else
 			error_flag = 1;
 	}
+	return 0;
 }
 
-void Contact::set_secret()
+int Contact::set_secret()
 {
 	int	error_flag;
 
@@ -120,12 +128,14 @@ void Contact::set_secret()
 			std::cout << "This section cant be empty!" << std::endl;
 			std::cout << "Darkest Secret: ";
 		}
-		std::getline(std::cin, darkest_secret);
-		if (darkest_secret.size() != 0)
+		if(!std::getline(std::cin, darkest_secret))
+			return -1;
+		else if (first_name.size() != 0)
 			break ;
 		else
 			error_flag = 1;
 	}
+	return 0;
 }
 std::string Contact::getter(std::string option)
 {
