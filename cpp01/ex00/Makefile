@@ -6,13 +6,13 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 09:34:47 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/08 21:15:03 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/12 16:22:49 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 C++ = c++
-C++_FLAGS = -g -Wall -Wextra -Werror -std=c++98 -pedantic
+C++_FLAGS = -g -Wall -Wextra -Werror -std=c++98
 INFILES = 	Zombie.cpp main.cpp newZombie.cpp randomChump.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)

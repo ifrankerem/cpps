@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 08:36:46 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/08 09:56:34 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 16:56:07 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ class Zombie
 	private :
 	std::string name; 
 	public :
+	Zombie(std::string name);
+	~Zombie();
 	void announce(void);
-	void setName(std::string name);
 };
 
 Zombie* newZombie( std::string name );

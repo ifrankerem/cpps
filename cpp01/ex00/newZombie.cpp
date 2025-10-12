@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:05:37 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/08 21:43:06 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 16:54:38 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie	*newZombie(std::string name)
 {
-	Zombie *zombie = new (Zombie);
-	(*zombie).setName(name);
-	return (zombie);
+	Zombie *newzombie;
+	newzombie = new Zombie(name); // NESNE OLUSTURMA İŞİ
+	return (newzombie);
 }
