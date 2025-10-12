@@ -6,12 +6,12 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 21:35:54 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/08 21:36:11 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/12 20:16:09 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-C++ = c++
-C++_FLAGS = -g -Wall -Wextra -Werror -std=c++98 -pedantic
+CXX = c++
+CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
 INFILES = 	Zombie.cpp main.cpp zombieHorde.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
@@ -21,10 +21,10 @@ NAME = zombie
 all: $(NAME)
 
 $(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(CXX) $(CXX_FLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(C++) $(C++_FLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)

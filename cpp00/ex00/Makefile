@@ -6,12 +6,12 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/01 22:19:46 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/11 21:54:10 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/12 20:16:55 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 INFILES = 	megaphone.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
@@ -21,10 +21,10 @@ NAME = megaphone
 all: $(NAME)
 
 $(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(CXX) $(CxXFLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(C++) $(C++_FLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)

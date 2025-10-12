@@ -6,26 +6,25 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:36:16 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/08 22:05:17 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 20:13:54 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
-#include <iomanip>
-#include <iostream>
-#include <string>
+# include <iomanip>
+# include <iostream>
+# include <string>
 
 class Zombie
 {
-  private:
-	std::string name;
-
-  public:
+	private :
+	std::string name; 
+	public :
 	Zombie();
 	~Zombie();
 	void announce(void);
 	void setName(std::string name);
+
 };
 
-Zombie	*newZombie(std::string name);
+Zombie* newZombie( std::string name );
 Zombie	*zombieHorde(int N, std::string name);
