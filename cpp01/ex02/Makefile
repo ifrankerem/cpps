@@ -6,12 +6,12 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/12 20:15:46 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/12 20:15:47 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/12 20:22:40 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
-CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
 INFILES = 	Zombie.cpp main.cpp zombieHorde.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)

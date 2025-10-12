@@ -6,13 +6,12 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 09:34:47 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/12 20:16:29 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/12 20:23:04 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
 CXX = c++
-CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 INFILES = 	Zombie.cpp main.cpp newZombie.cpp randomChump.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
