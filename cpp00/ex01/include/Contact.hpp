@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:43:34 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/11 22:48:01 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 02:02:04 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include <cstdlib>
-# include <iomanip>
-# include <iostream>
-# include <string>
+#include <iomanip> // setw
+#include <iostream> //std::cout , std::cin ...
+#include <string>  // std::string , std::getline()
 
 class Contact
 {

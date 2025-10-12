@@ -6,12 +6,11 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:47 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 01:37:36 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 02:04:01 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include "PhoneBook.hpp"
 
 Contact::Contact(void)
 {
@@ -166,4 +165,3 @@ std::string Contact::getter(std::string option)
 		return (darkest_secret);
 	return (NULL);
 }
-// bunlar bir method veya member function

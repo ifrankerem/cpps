@@ -6,25 +6,21 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:46:15 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 00:22:46 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 02:22:00 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "Contact.hpp"
-# include <cstdlib>
-# include <iomanip>
-# include <iostream>
-# include <string>
+#include "Contact.hpp"
 
 class PhoneBook
 {
   private:
 	int count;
 	int index;
-	Contact l_contact[8];
+	Contact l_contact[8]; // contact nesnesi dizisi!!
 
   public:
 	PhoneBook(void);

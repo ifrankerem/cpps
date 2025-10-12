@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:14 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 01:48:52 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 02:20:51 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int	main(void)
 				return 0;
 			pb.set_phonebook(contact);
 			std::cout << "Contact added to PhoneBook!" << std::endl;
+			contact = Contact(); // for erasing old contact attributes
 		}
 		else if (command == "SEARCH")
 		{
