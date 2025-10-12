@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:14 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/11 22:52:03 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 00:13:08 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,17 @@ int	main(void)
 			if(contact.set_firstname() == -1)
 				return 0;
 			std::cout << "LastName: ";
-			contact.set_lastname();
+			if(contact.set_lastname() == -1)
+				return 0;
 			std::cout << "Nickname: ";
-			contact.set_nickname();
+			if(contact.set_nickname() == -1)
+				return 0;
 			std::cout << "Phone Number: ";
-			contact.set_number();
+			if(contact.set_number() == -1)
+				return 0;
 			std::cout << "Darkest Secret: ";
-			contact.set_secret();
+			if(contact.set_secret() == -1)
+				return 0;
 			pb.set_phonebook(contact);
 		}
 		else if (command == "SEARCH")
