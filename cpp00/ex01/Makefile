@@ -6,31 +6,31 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/05 03:36:25 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/05 22:17:35 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/12 00:22:55 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME      = phone
 
-CXX       = c++
-CXXFLAGS  = -Wall -Wextra -Werror -std=c++98 -pedantic
+C++       = c++
+C++_FLAGS  = -Wall -Wextra -Werror -std=c++98
 
 SRC_DIR   = src
 INC_DIR   = include
 OBJ_DIR   = obj
 
-SRC_FILES = main.cpp phonebook.cpp contact.cpp
+SRC_FILES = main.cpp PhoneBook.cpp Contact.cpp
 SRC       = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ       = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.cpp=.o))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(C++) $(C++_FLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(OBJ_DIR)
-	$(CXX) $(CXXFLAGS) -I $(INC_DIR) -c $< -o $@
+	$(C++) $(C++_FLAGS) -I $(INC_DIR) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)

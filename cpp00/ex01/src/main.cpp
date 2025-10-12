@@ -6,12 +6,12 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:14 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 00:13:08 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 00:34:02 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int	main(void)
 {
@@ -48,6 +48,7 @@ int	main(void)
 			if(contact.set_secret() == -1)
 				return 0;
 			pb.set_phonebook(contact);
+			std::cout << "Contact added to PhoneBook!" << std::endl;
 		}
 		else if (command == "SEARCH")
 		{

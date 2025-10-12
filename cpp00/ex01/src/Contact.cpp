@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 21:54:47 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/11 22:51:37 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/12 01:37:36 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 Contact::Contact(void)
 {
@@ -28,6 +28,16 @@ Contact::~Contact(void)
 	return ;
 }
 
+static int is_nbr(std::string x)
+{
+	for(size_t i = 0; i < x.size();i++)
+	{
+		if(!std::isdigit(x[i]))
+			return -1;
+	}
+	return 1;
+	
+}
 int Contact::set_firstname()
 {
 	int	error_flag;
@@ -64,7 +74,7 @@ int Contact::set_lastname()
 		}
 		if(!std::getline(std::cin, last_name))
 			return -1;
-		else if (first_name.size() != 0)
+		else if (last_name.size() != 0)
 			break ;
 		else
 			error_flag = 1;
@@ -86,7 +96,7 @@ int Contact::set_nickname()
 		}
 		if(!std::getline(std::cin, nickname))
 			return -1;
-		else if (first_name.size() != 0)
+		else if (nickname.size() != 0)
 			break ;
 		else
 			error_flag = 1;;
@@ -108,7 +118,12 @@ int Contact::set_number()
 		}
 		if(!std::getline(std::cin, phone_number))
 			return -1;
-		else if (first_name.size() != 0)
+		else if(is_nbr(phone_number) == -1)
+			{
+				std::cout << "Please enter a number!!" << std::endl;
+				std::cout << "Phone Number: ";
+			}			
+		else if (phone_number.size() != 0)
 			break ;
 		else
 			error_flag = 1;
@@ -130,7 +145,7 @@ int Contact::set_secret()
 		}
 		if(!std::getline(std::cin, darkest_secret))
 			return -1;
-		else if (first_name.size() != 0)
+		else if (darkest_secret.size() != 0)
 			break ;
 		else
 			error_flag = 1;
