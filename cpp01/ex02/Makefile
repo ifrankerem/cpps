@@ -6,25 +6,25 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/12 20:15:46 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/12 20:22:40 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/19 21:42:41 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
-CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
-INFILES = 	Zombie.cpp main.cpp zombieHorde.cpp\
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+INFILES = main.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = zombie
+NAME = brain
 
 all: $(NAME)
 
 $(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(CXX) $(CXX_FLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(C++) $(C++_FLAGS) -c $< -o $@
+	$(CXX) $(CXX_FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)

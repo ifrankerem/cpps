@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/08 21:35:54 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/19 18:04:31 by iarslan          ###   ########.fr        #
+#    Created: 2025/10/19 18:55:00 by iarslan           #+#    #+#              #
+#    Updated: 2025/10/19 21:40:13 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-INFILES = Zombie.cpp main.cpp zombieHorde.cpp\
+INFILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = zombie
+NAME = weapon
 
 all: $(NAME)
 
@@ -24,7 +24,7 @@ $(NAME):$(OBJFILES)
 	$(CXX) $(CXX_FLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXX_FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)
