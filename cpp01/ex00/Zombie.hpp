@@ -6,11 +6,10 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 08:36:46 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 16:56:07 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/20 11:41:50 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <cstdlib>
 # include <iomanip>
 # include <iostream>
 # include <string>

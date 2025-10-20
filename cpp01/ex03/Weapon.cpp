@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:46:08 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/19 21:31:06 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/20 16:14:00 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 Weapon::Weapon(std::string type)
 {
-	this->type = type;
+	this->setType(type);
 }
 Weapon::~Weapon()
 {
-	return;
+	return ;
 }
-std::string& Weapon::getType()
+const std::string &Weapon::getType() const
 {
-	std::string &ref_type = this->type;
-	return(ref_type);
+	return (this->type);
 }
-std::string& Weapon::setType(std::string name)
+
+void Weapon::setType(std::string type)
 {
-	std::string &ref_type = this->type;
-	ref_type = name;
-	return(ref_type);
+	this->type = type;
 }

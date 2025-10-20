@@ -6,7 +6,7 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 21:35:54 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/19 18:04:31 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/20 16:46:51 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ NAME = zombie
 all: $(NAME)
 
 $(NAME):$(OBJFILES)
-	$(CXX) $(CXX_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(CXX) $(CXXFLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@

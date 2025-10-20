@@ -6,7 +6,7 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/19 21:44:13 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/20 02:22:33 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/20 15:50:22 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ INFILES = main.cpp Harl.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Harl
+NAME = harl
 
 all: $(NAME)
 

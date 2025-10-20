@@ -6,7 +6,7 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 09:34:47 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/19 18:04:25 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/20 16:46:56 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ $(NAME):$(OBJFILES)
 	$(CXX) $(CXXFLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(CxX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)

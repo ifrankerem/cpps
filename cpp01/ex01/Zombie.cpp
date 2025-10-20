@@ -6,7 +6,7 @@
 /*   By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:36:20 by iarslan           #+#    #+#             */
-/*   Updated: 2025/10/12 20:13:57 by iarslan          ###   ########.fr       */
+/*   Updated: 2025/10/20 12:14:41 by iarslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	Zombie::setName(std::string name)
 	this->name = name;
 }
 
-Zombie	*newZombie(std::string name)
-{
-	Zombie *newzombie;
-	newzombie = new Zombie;
-	newzombie->setName(name);
-	return (newzombie);
-}

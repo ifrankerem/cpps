@@ -6,7 +6,7 @@
 #    By: iarslan <iarslan@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/12 20:15:46 by iarslan           #+#    #+#              #
-#    Updated: 2025/10/19 21:42:41 by iarslan          ###   ########.fr        #
+#    Updated: 2025/10/20 16:46:49 by iarslan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,10 @@ NAME = brain
 all: $(NAME)
 
 $(NAME):$(OBJFILES)
-	$(CXX) $(CXX_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(CXX) $(CXXFLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(CXX) $(CXX_FLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)
