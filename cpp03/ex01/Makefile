@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 INFILES = ClapTrap.cpp main.cpp ScavTrap.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 all: $(NAME)
 

@@ -10,5 +10,6 @@ int main(void)
 	a.attack("huseyin");
 	b.takeDamage(a.getAttackDamagePoints());
 	b.beRepaired(31);
+	b.guardGate();
 	std::cout << a << "\n" << b << std::endl;
 }
