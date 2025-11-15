@@ -1,9 +1,9 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-INFILES = Fixed.cpp bsp.cpp main.cpp Point.cpp
+INFILES = Fixed.cpp main.cpp Point.cpp bsp.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = fixed
+NAME = bsp
 
 all: $(NAME)
 

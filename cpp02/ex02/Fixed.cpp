@@ -180,6 +180,3 @@ const Fixed& Fixed::max(const Fixed& obj_1, const Fixed&  obj_2)
 	else
 		return(obj_2);	
 }
-
-
-

@@ -4,38 +4,38 @@
 
 Fixed::Fixed()
 {
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 	this->fixed_number = 0;
 }
 
 Fixed::Fixed(const int x)
 {
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 	this->fixed_number = x << 8;
 }
 Fixed::Fixed(const float x)
 {
-	std::cout << "Float constructor called" << std::endl;
+	//std::cout << "Float constructor called" << std::endl;
 	this->fixed_number = roundf(x * 256);
 }
 
 Fixed::Fixed(Fixed const &obj)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 	*this = obj;
 	//fixed_number = obj.getRawBits();
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 
 //setter - getter
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	//std::cout << "getRawBits member function called" << std::endl;
 	return (this->fixed_number);
 }
 
@@ -66,7 +66,7 @@ std::ostream& operator<<(std::ostream& out, const Fixed& obj)
 
 Fixed &Fixed::operator=(const Fixed& obj)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	//std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &obj)
 		this->fixed_number = obj.getRawBits();
 	return(*this);
