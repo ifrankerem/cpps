@@ -8,7 +8,7 @@ class Fixed
 
   public:
 	Fixed();
-	Fixed(Fixed &x);
+	Fixed(Fixed const &x);
 	~Fixed();
 	Fixed& operator=(const Fixed& obj);
 	int getRawBits(void) const;
