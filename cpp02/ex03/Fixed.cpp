@@ -23,7 +23,6 @@ Fixed::Fixed(Fixed const &obj)
 {
 	//std::cout << "Copy constructor called" << std::endl;
 	*this = obj;
-	//fixed_number = obj.getRawBits();
 }
 
 Fixed::~Fixed()

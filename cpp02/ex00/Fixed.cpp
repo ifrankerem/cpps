@@ -10,7 +10,6 @@ Fixed::Fixed(Fixed const &obj)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = obj;
-	//fixed_number = obj.getRawBits();
 }
 Fixed::~Fixed()
 {
@@ -33,5 +32,6 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
+	//std::cout << "setRawBits member function called" << std::endl;
 	this->fixed_number = raw;
 }
