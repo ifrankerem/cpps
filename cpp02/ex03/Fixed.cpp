@@ -11,12 +11,12 @@ Fixed::Fixed()
 Fixed::Fixed(const int x)
 {
 	//std::cout << "Int constructor called" << std::endl;
-	this->fixed_number = x << 8;
+	this->fixed_number = x << this->fractional_bits;
 }
 Fixed::Fixed(const float x)
 {
 	//std::cout << "Float constructor called" << std::endl;
-	this->fixed_number = roundf(x * 256);
+	this->fixed_number = roundf(x * (1 << this->fractional_bits));
 }
 
 Fixed::Fixed(Fixed const &obj)
@@ -40,6 +40,7 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
+	//std::cout << "setRawBits member function called" << std::endl;
 	this->fixed_number = raw;
 }
 
@@ -47,7 +48,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat( void ) const
 {
-	return ((float)this->fixed_number / 256.0f);
+	return ((float)this->fixed_number / (1 << this->fractional_bits));
 }
 
 int Fixed::toInt( void ) const
@@ -98,28 +99,25 @@ bool Fixed::operator!=(const Fixed& obj) const
 
 Fixed Fixed::operator+(const Fixed& obj) const
 {
+	// return(this->toFloat() + obj.toFloat());
 	Fixed temp;
 	temp.setRawBits(this->fixed_number + obj.fixed_number);
-	return (temp);
+	return(temp);
 }
 
 Fixed Fixed::operator-(const Fixed& obj) const
 {
 	Fixed temp;
 	temp.setRawBits(this->fixed_number - obj.fixed_number);
-	return (temp);
+	return(temp);
 }
 Fixed Fixed::operator*(const Fixed& obj) const
 {
-	Fixed temp;
-	temp.setRawBits((this->fixed_number * obj.fixed_number) / 256);
-	return (temp);
+	return Fixed(this->toFloat() * obj.toFloat());
 }
 Fixed Fixed::operator/(const Fixed& obj) const
 {
-	Fixed temp;
-	temp.setRawBits(((this->fixed_number * 256) / obj.fixed_number));
-	return (temp);
+	return Fixed(this->toFloat() / obj.toFloat());
 }
 
 Fixed& Fixed::operator++()
@@ -179,6 +177,3 @@ const Fixed& Fixed::max(const Fixed& obj_1, const Fixed&  obj_2)
 	else
 		return(obj_2);	
 }
-
-
-
