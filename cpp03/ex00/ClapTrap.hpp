@@ -1,3 +1,6 @@
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
+
 #include <string>
 #include <iostream>
 class ClapTrap
@@ -25,3 +28,6 @@ class ClapTrap
 };
 
 std::ostream& operator<<(std::ostream& out, const ClapTrap& obj);
+
+
+#endif

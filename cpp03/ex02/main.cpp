@@ -1,4 +1,4 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 
 int main(void)
@@ -6,22 +6,22 @@ int main(void)
 	ClapTrap f("Faruk");
 	ClapTrap g("Rambo");
 
-	//ScavTrap c;
-	ScavTrap a ("kerem");
-	ScavTrap b ("huseyin");
-	ScavTrap d ("mehmet");
+	//FragTrap c;
+	FragTrap a ("kerem");
+	FragTrap b ("huseyin");
+	FragTrap d ("mehmet");
 	std::cout << d << std::endl;
 	d = a;
 	std::cout << d << std::endl;
 	//std::cout << d << std::endl;
 	//std::cout << c << std::endl;
 	//f.guardGate();
-	a.guardGate();
+	a.highFivesGuys();
 	a.attack(b.getName());
 	b.takeDamage(a.getAttackDamagePoints());
 	b.beRepaired(31);
 	std::cout << a << "\n" << b << std::endl;
-	ScavTrap e (b);
+	FragTrap e (b);
 	std::cout << e << std::endl;
 	f.attack(g.getName());
 	g.takeDamage(f.getAttackDamagePoints());

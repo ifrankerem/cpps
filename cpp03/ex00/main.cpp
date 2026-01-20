@@ -7,8 +7,9 @@ int main(void)
 	ClapTrap b ("huseyin");
 
 	std::cout << a << "\n" << b << std::endl;
-	a.attack("huseyin");
+	a.attack(b.getName());
 	b.takeDamage(a.getAttackDamagePoints());
 	b.beRepaired(31);
+	std::cout << "\n";
 	std::cout << a << "\n" << b << std::endl;
 }
