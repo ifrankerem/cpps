@@ -15,7 +15,6 @@ int main(void)
 	std::cout << d << std::endl;
 	//std::cout << d << std::endl;
 	//std::cout << c << std::endl;
-	//f.guardGate();
 	a.highFivesGuys();
 	a.attack(b.getName());
 	b.takeDamage(a.getAttackDamagePoints());
@@ -27,5 +26,4 @@ int main(void)
 	g.takeDamage(f.getAttackDamagePoints());
 
 	std::cout << g << std::endl;
-	// b.guardGate();
 }

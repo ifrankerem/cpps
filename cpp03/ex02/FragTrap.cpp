@@ -39,7 +39,7 @@ void FragTrap::highFivesGuys(void)
 	std::cout << "GIVE ME HIGH FIVE MAAAN!!!" << std::endl;
 }
 
-//non-member oldugundan inherit edilemez bu nedenle 0 dan kendim yazdım FragTrap için
+//its non-member so cant be inherited. Because of that i wrote that myself
 
 std::ostream& operator<<(std::ostream& out, const FragTrap& obj)
 {
