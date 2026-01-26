@@ -4,7 +4,7 @@ Dog::Dog() : Animal()
 {
 	std::cout << "Dog's constructor" << std::endl;
 	this->type = "Dog";
-	brain = new Brain();
+	//brain = new Brain;
 }
 
 Dog::Dog(const Dog& other) : Animal(other)
@@ -16,7 +16,7 @@ Dog::Dog(const Dog& other) : Animal(other)
 Dog::~Dog()
 {
 	std::cout << "Dog's destructor" << std::endl;
-	delete [] brain;
+	//delete brain;
 }
 
 Dog& Dog::operator=(const Dog& other)

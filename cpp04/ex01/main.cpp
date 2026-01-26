@@ -1,35 +1,19 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-
-	delete(meta);
-	delete(j);
-	delete(i);
-	//there is important show UB behavior to eval!!
-	//crate data in the cat and delete in the deconstructor so it will fail in the valgrind
-
-	const WrongAnimal* WrongMeta = new WrongAnimal();
-	const WrongAnimal* BrokenCat = new WrongCat();
-	std::cout << BrokenCat->getType() << " " << std::endl;
-
-	BrokenCat->makeSound();
-	WrongMeta->makeSound();
-
-	delete(WrongMeta);
-	delete(BrokenCat);
-
+	int N = 2;
+	Animal **arr = new Animal*[N];
+	for(int i = 0; i < N/2 ; i++)
+		arr[i] = new Dog;
+	// for(int i = N/2 ; i < N ; i++)
+	// 	arr[i] = new Cat;
+	for(int i = 0 ; i < N ; i++)
+ 		arr[i]->makeSound();
+	for(int i = 0 ; i < N ; i++)
+		delete arr[i];
+	delete [] arr;
 	return 0;
 }

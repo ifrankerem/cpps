@@ -1,9 +1,9 @@
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-INFILES = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
+CXXFLAGS = -Wall -Wextra -std=c++98 -pedantic
+INFILES = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = MakeSound
+NAME = Brain
 
 all: $(NAME)
 

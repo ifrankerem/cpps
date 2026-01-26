@@ -4,7 +4,7 @@ Cat::Cat() : Animal()
 {
 	std::cout << "Cat's constructor" << std::endl;
 	this->type = "Cat";
-	brain = new Brain();
+	brain = new Brain;
 }
 
 Cat::Cat(const Cat& other)  : Animal(other)
@@ -16,7 +16,7 @@ Cat::Cat(const Cat& other)  : Animal(other)
 Cat::~Cat()
 {
 	std::cout << "Cat's destructor" << std::endl;
-	delete [] brain;
+	delete brain;
 }
 
 Cat& Cat::operator=(const Cat& other)
