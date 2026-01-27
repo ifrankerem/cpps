@@ -48,7 +48,10 @@
 	"streambuf": "cpp",
 	"typeinfo": "cpp",
 	"*.h": "cpp",
-	"fstream": "cpp"
+	"fstream": "cpp",
+	"optional": "cpp",
+	"ranges": "cpp",
+	"span": "cpp"
 },
   "42header.username": "iarslan",
   "42header.email": "iarslan@student.42istanbul.com.tr",
@@ -60,7 +63,7 @@
   "editor.formatOnSave": true,
   "files.autoSave": "afterDelay",
   "window.commandCenter": false,
-  "window.zoomLevel": 0.52,
+  "window.zoomLevel": 3.269418483467991,
   "workbench.colorTheme": "Dark+ (default dark)",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "Fira Code, JetBrains Mono, Consolas, 'Courier New', monospace",

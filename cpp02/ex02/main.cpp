@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-
 // int main( void ) {
 // 	Fixed a(10.6f);
 // 	Fixed b(2);
@@ -27,7 +26,8 @@
 // }
 
 int main( void ) {
-	Fixed a;
+	float x = 23.6f;
+	std::cout << (int)x << std::endl;
 	// Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	// Fixed c(10.2f);
 	// Fixed d(2);
@@ -37,11 +37,11 @@ int main( void ) {
 	// std::cout << d.toFloat() << std::endl;
 	// std::cout << c/d << std::endl;
 	// std::cout << c.toFloat() << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
 	// std::cout << a << std::endl;
+	// std::cout << a++ << std::endl;
+	// std::cout << a << std::endl;
+	// std::cout << ++a << std::endl;
+	// // std::cout << a << std::endl;
 	// std::cout << a++ << std::endl;
 	// std::cout << a << std::endl;
 	// std::cout << b << std::endl;

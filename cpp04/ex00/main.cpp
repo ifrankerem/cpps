@@ -18,8 +18,6 @@ int main()
 	delete(meta);
 	delete(j);
 	delete(i);
-	//there is important show UB behavior to eval!!
-	//crate data in the cat and delete in the deconstructor so it will fail in the valgrind
 
 	const WrongAnimal* WrongMeta = new WrongAnimal();
 	const WrongAnimal* BrokenCat = new WrongCat();

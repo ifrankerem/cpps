@@ -16,6 +16,9 @@ class Cat : public Animal
 		Cat(const Cat& other);
 		Cat& operator=(const Cat& other);
 		void makeSound() const; // virtual override
+
+		void set_ideas(std::string idea);
+		std::string get_ideas() const;
 };
 
 #endif
