@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <climits>
 
 int main()
@@ -72,10 +73,70 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
+
 	try{
 		Bureaucrat thorne("g",42);
 		thorne.ft_decrement(109);
 		std::cout << thorne << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	//--------------------------------------
+
+	try{
+		Form form1("form1",151,3);
+		std::cout << form1 << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	try{
+		Form form2("form2",-1,3);
+		std::cout << form2 << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	try{
+		Form form1("form1",3,151);
+		std::cout << form1 << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	try{
+		Form form2("form2",3,0);
+		std::cout << form2 << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	try{
+		Bureaucrat thorne("thorne",42);
+		Form form1("form1",3,3);
+		thorne.signForm(form1);
+		std::cout << form1 << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try{
+		Bureaucrat thorne("thorne",1);
+		Form form1("form1",3,3);
+		thorne.signForm(form1);
+		std::cout << form1 << std::endl;
 	}
 	catch(std::exception & e)
 	{
