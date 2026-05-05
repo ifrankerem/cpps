@@ -1,5 +1,5 @@
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 INFILES = main.cpp Bureaucrat.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
