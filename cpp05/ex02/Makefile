@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 INFILES = main.cpp Bureaucrat.cpp Form.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = deneme
+NAME = denemeeee
 
 all: $(NAME)
 
