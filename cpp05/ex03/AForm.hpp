@@ -59,7 +59,6 @@ class AForm
 		int get_e_grade() const;
 		virtual void execute(Bureaucrat const & executor) const = 0;
 		void ft_check_req(Bureaucrat const &executor) const;
-
 };
 
 std::ostream& operator<<(std::ostream& out, const AForm& obj);

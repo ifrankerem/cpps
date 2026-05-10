@@ -39,7 +39,7 @@ Bureaucrat::~Bureaucrat()
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
-	std::cout << "Animal's copy assignment constructor" << std::endl;
+	std::cout << "Bureaucrat's copy assignment constructor" << std::endl;
 	if(this != &other)
 		this->_grade = other._grade;
 	return(*this);

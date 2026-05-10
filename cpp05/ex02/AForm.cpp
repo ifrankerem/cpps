@@ -45,7 +45,7 @@ AForm::AForm(const AForm& other) : _name(other._name) , _s_grade(other._s_grade)
 
 AForm::~AForm()
 {
-	std::cout << "AForms's destructor" << std::endl;
+	std::cout << "AForm's destructor" << std::endl;
 }
 
 AForm& AForm::operator=(const AForm& other)
