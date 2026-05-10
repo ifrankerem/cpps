@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 INFILES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = denemeeee
+NAME = Form
 
 all: $(NAME)
 

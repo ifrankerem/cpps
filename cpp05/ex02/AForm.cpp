@@ -16,6 +16,14 @@ const char* AForm::GradeTooLowException::what() const throw()
 	return _message.c_str();  // c style string
 }
 
+AForm::notSignedException::notSignedException(const std::string& message) : _message(message) {} // using Initialization list
+AForm::notSignedException::~notSignedException() throw() {}
+
+const char* AForm::notSignedException::what() const throw()
+{	
+	return _message.c_str();  // c style string
+}
+
 AForm::AForm(std::string name, int s_grade, int e_grade) : _name(name) , _s_grade(s_grade) , _e_grade(e_grade)
 {
 	if(s_grade > 150)
@@ -74,6 +82,14 @@ void AForm::beSigned(Bureaucrat& obj)
 		this->indicator = true;
 	else
 		throw GradeTooLowException("Bureaucrat's grade is too low for signing!");
+}
+
+void AForm::ft_check_req(Bureaucrat const &executor) const
+{
+	if(this->getindicator() == false)
+		throw notSignedException("Form is not signed!");
+	if(executor.getGrade() > this->get_e_grade())
+		throw GradeTooLowException(executor.getName() +" is too low to execute it!");
 }
 
 std::ostream& operator<<(std::ostream& out, const AForm& obj)

@@ -1,15 +1,9 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string name, int s_grade, int e_grade) : _name(name) , _s_grade(s_grade) , _e_grade(e_grade)
+#include <fstream>
+
+PresidentialPardonForm::PresidentialPardonForm(std::string const &target) : AForm("PresidentialPardonForm",25,5), _target(target)
 {
-	if(s_grade > 150)
-		throw GradeTooLowException("Sign grade is so low!");
-	else if(s_grade < 1)
-		throw GradeTooHighException("Sign grade is so high!");
-	else if(e_grade > 150)
-		throw GradeTooLowException("Execute grade is so low!");
-	else if(e_grade < 1)
-		throw GradeTooHighException("Execute grade is so high!");
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
@@ -17,7 +11,32 @@ PresidentialPardonForm::~PresidentialPardonForm()
 	std::cout << "PresidentialPardonForm's destructor" << std::endl;
 }
 
-void execute(Bureaucrat const & executor) const
+PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& other)
 {
-	if()
+	if(this != &other)
+	{
+		AForm::operator=(other);
+		this->_target = other._target;
+	}
+	return(*this);
+}
+
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& other) : AForm(other) , _target(other._target)
+{
+}
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+	this->ft_check_req(executor);
+	std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+}
+
+std::string PresidentialPardonForm::getTarget() const {
+	return(this->_target);
+}
+
+std::ostream& operator<<(std::ostream& out, const PresidentialPardonForm& obj)
+{
+	out << "AForm Name: " << obj.getName() << " Indıcator: " << obj.getindicator() << " Sign Grade: " << obj.get_s_grade() << " Execute Grade: " << obj.get_e_grade() << " Target Name: " << obj.getTarget();
+	return(out);
 }
