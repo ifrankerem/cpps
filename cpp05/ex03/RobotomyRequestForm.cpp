@@ -43,7 +43,7 @@ std::string RobotomyRequestForm::getTarget() const {
 
 std::ostream& operator<<(std::ostream& out, const RobotomyRequestForm& obj)
 {
-	out << "AForm Name: " << obj.getName() << " Indıcator: " << obj.getindicator() << " Sign Grade: " << obj.get_s_grade() << " Execute Grade: " << obj.get_e_grade() << " Target Name: " << obj.getTarget();
+	out << "AForm Name: " << obj.getName() << " Indicator: " << obj.getindicator() << " Sign Grade: " << obj.get_s_grade() << " Execute Grade: " << obj.get_e_grade() << " Target Name: " << obj.getTarget();
 	return(out);
 }
 

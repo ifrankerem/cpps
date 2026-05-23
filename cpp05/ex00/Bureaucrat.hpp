@@ -37,8 +37,8 @@ class Bureaucrat
 		Bureaucrat& operator=(const Bureaucrat& other);
 		std::string getName() const;
 		int getGrade() const;
-		void ft_increment(int value);
-		void ft_decrement(int value);
+		void ft_increment();
+		void ft_decrement();
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj);

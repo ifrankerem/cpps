@@ -39,7 +39,7 @@ AForm* Intern::createShrubberyCreationForm(std::string const &target)
 
 AForm* Intern::makeForm(std::string const &name, std::string const &target)
 {
-	std::string options[3] = {"PresidentialPardonForm", "RobotomyRequestForm", "ShrubberyCreationForm"};
+	std::string options[3] = {"shrubbery creation","robotomy request","presidential pardon"};
 	AForm*(Intern::*funcs[3])(std::string const &);
 	funcs[0] = &Intern::createPresidentialPardonForm;
 	funcs[1] = &Intern::createRobotomyRequestForm;

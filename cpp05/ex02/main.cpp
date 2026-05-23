@@ -72,7 +72,7 @@ int main()
 	// }
 	// try{
 	// 	Bureaucrat hate("g",42);
-	// 	hate.ft_increment(42);
+	// 	hate.ft_increment();
 	// 	std::cout << hate << std::endl;
 	// }
 	// catch(std::exception & e)
@@ -82,7 +82,7 @@ int main()
 
 	// try{
 	// 	Bureaucrat thorne("g",42);
-	// 	thorne.ft_decrement(109);
+	// 	thorne.ft_decrement();
 	// 	std::cout << thorne << std::endl;
 	// }
 	// catch(std::exception & e)

@@ -71,7 +71,7 @@ int main()
 	// }
 	// try{
 	// 	Bureaucrat hate("g",42);
-	// 	hate.ft_increment(42);
+	// 	hate.ft_increment();
 	// 	std::cout << hate << std::endl;
 	// }
 	// catch(std::exception & e)
@@ -81,7 +81,7 @@ int main()
 
 	// try{
 	// 	Bureaucrat thorne("g",42);
-	// 	thorne.ft_decrement(109);
+	// 	thorne.ft_decrement();
 	// 	std::cout << thorne << std::endl;
 	// }
 	// catch(std::exception & e)
@@ -186,9 +186,9 @@ int main()
 	{
 		Intern intern;
 
-		AForm* form1 = intern.makeForm("PresidentialPardonForm", "target1");
-		AForm* form2 = intern.makeForm("RobotomyRequestForm", "target2");
-		AForm* form3 = intern.makeForm("ShrubberyCreationForm", "target3");
+		AForm* form1 = intern.makeForm("presidential pardon", "target1");
+		AForm* form2 = intern.makeForm("robotomy request", "target2");
+		AForm* form3 = intern.makeForm("shrubbery creation", "target3");
 
 		Bureaucrat boss("Boss", 1);
 
@@ -244,7 +244,7 @@ int main()
 		Intern intern;
 		Bureaucrat boss("Boss", 1);
 
-		AForm* form = intern.makeForm("RobotomyRequestForm", "unsigned_target");
+		AForm* form = intern.makeForm("robotomy request", "unsigned_target");
 
 		if (form)
 		{
@@ -271,7 +271,7 @@ int main()
 		Bureaucrat signer("Signer", 1);
 		Bureaucrat executor("WeakExecutor", 10);
 
-		AForm* form = intern.makeForm("PresidentialPardonForm", "target4");
+		AForm* form = intern.makeForm("presidential pardon", "target4");
 
 		if (form)
 		{

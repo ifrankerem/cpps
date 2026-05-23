@@ -68,7 +68,7 @@ int Form::get_e_grade() const
 	return(this->_e_grade);
 }
 
-void Form::beSigned(Bureaucrat& obj)
+void Form::beSigned(const Bureaucrat& obj)
 {
 	if(obj.getGrade() <= this->_s_grade)
 		this->indicator = true;
@@ -79,6 +79,6 @@ void Form::beSigned(Bureaucrat& obj)
 
 std::ostream& operator<<(std::ostream& out, const Form& obj)
 {
-	out << "Form Name: " << obj.getName() << " Indıcator: " << obj.getindicator() << " Sign Grade: " << obj.get_s_grade() << " Execute Grade: " << obj.get_e_grade();
+	out << "Form Name: " << obj.getName() << " Indicator: " << obj.getindicator() << " Sign Grade: " << obj.get_s_grade() << " Execute Grade: " << obj.get_e_grade() << std::endl;
 	return(out);
 }

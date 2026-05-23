@@ -26,7 +26,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 		this->_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& other)
+Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name)
 {
 	std::cout << "Bureaucrat's copy constructor" << std::endl;
 	*this = other;
@@ -55,25 +55,25 @@ int Bureaucrat::getGrade() const
 	return this->_grade;
 }
 
-void Bureaucrat::ft_increment(int value)
+void Bureaucrat::ft_increment()
 {
-	if(this->_grade - value < 1)
+	if(this->_grade - 1 < 1)
 		throw GradeTooHighException("Increment value is too much!");
 	else 
-		this->_grade -= value;
+		this->_grade -= 1;
 }
 
-void Bureaucrat::ft_decrement(int value)
+void Bureaucrat::ft_decrement()
 {
-	if(this->_grade + value > 150)
+	if(this->_grade + 1 > 150)
 		throw GradeTooLowException("Decrement value is too much!");
 	else 
-		this->_grade += value;
+		this->_grade += 1;
 }
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj)
 {
-	out << obj.getName() << ", bureaucrat grade " << obj.getGrade() << std::endl;
+	out << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".";
 	return(out);
 }
 
@@ -85,7 +85,7 @@ void Bureaucrat::signForm(Form &obj)
 	}
 	catch(std::exception& e)
 	{
-		std::cout << this->_name << " couldn’t sign "<< obj.getName() << " because " << e.what() << std::endl;
+		std::cout << this->_name << " couldn’t sign "<< obj.getName() << " because " << e.what() << "." << std::endl;
 	}
 }
 

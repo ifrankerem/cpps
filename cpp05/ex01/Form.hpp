@@ -42,7 +42,7 @@ class Form
 		~Form();
 		Form(const Form& other);
 		Form& operator=(const Form& other);
-		void beSigned(Bureaucrat& obj);
+		void beSigned(const Bureaucrat& obj);
 		std::string getName() const;
 		bool getindicator() const;
 		int get_s_grade() const;

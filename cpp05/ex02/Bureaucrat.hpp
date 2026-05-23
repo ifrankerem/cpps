@@ -40,10 +40,10 @@ class Bureaucrat
 		Bureaucrat& operator=(const Bureaucrat& other);
 		std::string getName() const;
 		int getGrade() const;
-		void ft_increment(int value);
-		void ft_decrement(int value);
+		void ft_increment();
+		void ft_decrement();
 		void signForm(AForm &obj);
-		void executeForm(AForm const & form);
+		void executeForm(AForm const & form) const;
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj);

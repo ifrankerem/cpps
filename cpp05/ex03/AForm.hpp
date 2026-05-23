@@ -49,10 +49,10 @@ class AForm
 		};
 
 		AForm(std::string name, int s_grade, int e_grade);
-		virtual ~AForm() = 0;
+		virtual ~AForm();
 		AForm(const AForm& other);
 		AForm& operator=(const AForm& other);
-		void beSigned(Bureaucrat& obj);
+		void beSigned(const Bureaucrat& obj);
 		std::string getName() const;
 		bool getindicator() const;
 		int get_s_grade() const;
