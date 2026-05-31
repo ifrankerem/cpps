@@ -22,7 +22,7 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other)
 	return(*this);
 }
 
-void ScalarConverter::convert(std::string literal)
+void ScalarConverter::convert(const std::string literal)
 {
 	char c_value;
 	int i_value;
@@ -78,6 +78,6 @@ void ScalarConverter::convert(std::string literal)
 		}
 	}
 	std::cout << "int: " << i_value << std::endl;
-	std::cout << "float: " << f_value << std::endl;
+	std::cout << "float: " << f_value << ".f" << std::endl;
 	std::cout << "double: " << d_value << std::endl;
 }

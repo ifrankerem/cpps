@@ -13,7 +13,7 @@ class ScalarConverter
 		~ScalarConverter();
 		ScalarConverter(const ScalarConverter& other);
 		ScalarConverter& operator=(const ScalarConverter& other);
-		void convert(std::string literal);
+		static void convert(const std::string literal);
 };
 
 #endif
