@@ -1,9 +1,9 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
-INFILES = ScalarConverter.cpp
+INFILES = main.cpp ScalarConverter.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Form
+NAME = ScalarConverter
 
 all: $(NAME)
 
