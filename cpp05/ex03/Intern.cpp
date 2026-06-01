@@ -41,9 +41,9 @@ AForm* Intern::makeForm(std::string const &name, std::string const &target)
 {
 	std::string options[3] = {"shrubbery creation","robotomy request","presidential pardon"};
 	AForm*(Intern::*funcs[3])(std::string const &);
-	funcs[0] = &Intern::createPresidentialPardonForm;
+	funcs[0] = &Intern::createShrubberyCreationForm;
 	funcs[1] = &Intern::createRobotomyRequestForm;
-	funcs[2] = &Intern::createShrubberyCreationForm;
+	funcs[2] = &Intern::createPresidentialPardonForm;
 	for(int i = 0; i < 3; i++)
 	{
 		if(name == options[i])
