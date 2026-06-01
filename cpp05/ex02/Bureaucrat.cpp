@@ -5,7 +5,7 @@ Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {}
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {	
-	return _message.c_str(); // c style string
+	return _message.c_str();
 }
 
 Bureaucrat::GradeTooLowException::GradeTooLowException(const std::string& message) : _message(message) {} // using Initialization list
@@ -13,7 +13,7 @@ Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {}
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {	
-	return _message.c_str();  // c style string
+	return _message.c_str();
 }
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)  
 {
