@@ -38,7 +38,10 @@ void ScalarConverter::convert(const std::string literal)
 			i_value = static_cast<int>(c_value);
 			f_value = static_cast<float>(c_value);
 			d_value = static_cast<double>(c_value);
-			std::cout << "char: " << c_value << std::endl; 
+			std::cout << "char: " << c_value << std::endl;
+			std::cout << "int: " << i_value << std::endl;
+			std::cout << "float: " << f_value << ".0f" << std::endl;
+			std::cout << "double: " << d_value << ".0" << std::endl;
 		}
 		else
 		{
@@ -46,6 +49,9 @@ void ScalarConverter::convert(const std::string literal)
 			f_value = static_cast<float>(i_value);
 			d_value = static_cast<double>(i_value);
 			std::cout << char_output << std::endl;
+			std::cout << "int: " << i_value << std::endl;
+			std::cout << "float: " << f_value << ".0f" << std::endl;
+			std::cout << "double: " << d_value << ".0" << std::endl;
 		}
 	}
 	else
@@ -55,6 +61,8 @@ void ScalarConverter::convert(const std::string literal)
 		{
 			if((literal[i] > '0' || literal[i] > '9') && (literal[i+1] > '0' || literal[i+1] > '9'))
 			 	flag = true;
+			else
+				flag = false;
 		} 
 		if(flag == true) //?
 		{
@@ -64,20 +72,40 @@ void ScalarConverter::convert(const std::string literal)
 			std::cout << "double: impossible" << std::endl;
 			return ;
 		}
+		else
+		{
+			i_value = atoi(str);
+			f_value = static_cast<float>(i_value);
+			d_value = static_cast<double>(i_value);
+			c_value = static_cast<char>(i_value);
+			std::cout << "char: " << c_value << std::endl;
+			std::cout << "int: " << i_value << std::endl;
+			std::cout << "float: " << f_value << ".0f" << std::endl;
+			std::cout << "double: " << d_value << ".0" << std::endl;
+
+		}
 		if(literal[literal.size() - 1] == 'f')
 		{
 			f_value = static_cast<float>(atof(str));
 			d_value = atof(str);
 			i_value = static_cast<int>(atof(str));
+			c_value = static_cast<char>(i_value);
+			std::cout << "char: " << c_value << std::endl;
+			std::cout << "int: " << i_value << std::endl;
+			std::cout << "float: " << f_value << ".0f" << std::endl;
+			std::cout << "double: " << d_value << ".0" << std::endl;
 		}
 		else if(literal.find('.') != std::string::npos)
 		{
 			d_value = atof(str);
 			f_value = static_cast<float>(d_value);
 			i_value = static_cast<int>(d_value);
+			c_value = static_cast<char>(i_value);
+			std::cout << "char: " << c_value << std::endl;
+			std::cout << "int: " << i_value << std::endl;
+			std::cout << "float: " << f_value << ".0f" << std::endl;
+			std::cout << "double: " << d_value << std::endl;
 		}
 	}
-	std::cout << "int: " << i_value << std::endl;
-	std::cout << "float: " << f_value << ".f" << std::endl;
-	std::cout << "double: " << d_value << std::endl;
+
 }
