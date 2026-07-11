@@ -1,0 +1,240 @@
+<<<<<  a  <<<<<
+char: 'a'
+int: 97
+float: 97.0f
+double: 97.0
+---------------
+<<<<<  z  <<<<<
+char: 'z'
+int: 122
+float: 122.0f
+double: 122.0
+---------------
+<<<<<  *  <<<<<
+char: '*'
+int: 42
+float: 42.0f
+double: 42.0
+---------------
+<<<<<  0  <<<<<
+char: Non displayable
+int: 0
+float: 0.0f
+double: 0.0
+---------------
+<<<<<  8  <<<<<
+char: Non displayable
+int: 8
+float: 8.0f
+double: 8.0
+---------------
+<<<<<  9  <<<<<
+char: Non displayable
+int: 9
+float: 9.0f
+double: 9.0
+---------------
+<<<<<  42  <<<<<
+char: '*'
+int: 42
+float: 42.0f
+double: 42.0
+---------------
+<<<<<  -42  <<<<<
+char: impossible
+int: -42
+float: -42.0f
+double: -42.0
+---------------
+<<<<<  +42  <<<<<
+char: '*'
+int: 42
+float: 42.0f
+double: 42.0
+---------------
+<<<<<  2147483647  <<<<<
+char: impossible
+int: 2147483647
+float: 2147483647.0f
+double: 2147483647.0
+---------------
+<<<<<  -2147483648  <<<<<
+char: impossible
+int: -2147483648
+float: -2147483648.0f
+double: -2147483648.0
+---------------
+<<<<<  2147483648  <<<<<
+char: impossible
+int: impossible
+float: 2147483648.0f
+double: 2147483648.0
+---------------
+<<<<<  -2147483649  <<<<<
+char: impossible
+int: impossible
+float: -2147483649.0f
+double: -2147483649.0
+---------------
+<<<<<  999999999999999999999999  <<<<<
+char: impossible
+int: impossible
+float: 1000000000000000000000000.0f
+double: 1000000000000000000000000.0
+---------------
+<<<<<  0.0f  <<<<<
+char: Non displayable
+int: 0
+float: 0.0f
+double: 0.0
+---------------
+<<<<<  8.0f  <<<<<
+char: Non displayable
+int: 8
+float: 8.0f
+double: 8.0
+---------------
+<<<<<  42.0f  <<<<<
+char: '*'
+int: 42
+float: 42.0f
+double: 42.0
+---------------
+<<<<<  -42.42f  <<<<<
+char: impossible
+int: -42
+float: -42.42f
+double: -42.42
+---------------
+<<<<<  +42.42f  <<<<<
+char: '*'
+int: 42
+float: 42.42f
+double: 42.42
+---------------
+<<<<<  0.0  <<<<<
+char: Non displayable
+int: 0
+float: 0.0f
+double: 0.0
+---------------
+<<<<<  8.0  <<<<<
+char: Non displayable
+int: 8
+float: 8.0f
+double: 8.0
+---------------
+<<<<<  42.0  <<<<<
+char: '*'
+int: 42
+float: 42.0f
+double: 42.0
+---------------
+<<<<<  -42.42  <<<<<
+char: impossible
+int: -42
+float: -42.42f
+double: -42.42
+---------------
+<<<<<  +42.42  <<<<<
+char: '*'
+int: 42
+float: 42.42f
+double: 42.42
+---------------
+<<<<<  nan  <<<<<
+char: impossible
+int: impossible
+float: nanf
+double: nan
+---------------
+<<<<<  nanf  <<<<<
+char: impossible
+int: impossible
+float: nanf
+double: nan
+---------------
+<<<<<  +inf  <<<<<
+char: impossible
+int: impossible
+float: +inff
+double: +inf
+---------------
+<<<<<  +inff  <<<<<
+char: impossible
+int: impossible
+float: +inff
+double: +inf
+---------------
+<<<<<  -inf  <<<<<
+char: impossible
+int: impossible
+float: -inff
+double: -inf
+---------------
+<<<<<  -inff  <<<<<
+char: impossible
+int: impossible
+float: -inff
+double: -inf
+---------------
+<<<<<    <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  abcfo  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  42foo  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  4f2  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  42.0ff  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  ++42  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  --42  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  42..0  <<<<<
+char: impossible
+int: impossible
+float: impossible
+double: impossible
+---------------
+<<<<<  .  <<<<<
+char: '.'
+int: 46
+float: 46.0f
+double: 46.0
+---------------
+<<<<<  f  <<<<<
+char: 'f'
+int: 102
+float: 102.0f
+double: 102.0
+---------------
