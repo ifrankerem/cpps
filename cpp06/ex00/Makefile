@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 INFILES = main.cpp ScalarConverter.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = ScalarConverter
+NAME = convert
 
 all: $(NAME)
 
