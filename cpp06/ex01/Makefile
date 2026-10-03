@@ -1,9 +1,9 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
-INFILES = main.cpp Bureaucrat.cpp Form.cpp
+INFILES = main.cpp Serialization.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Form
+NAME = Serialization
 
 all: $(NAME)
 
