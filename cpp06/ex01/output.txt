@@ -1,0 +1,14 @@
+[PASS] heap pointer round-trip
+[PASS] heap x value preserved
+[PASS] heap y value preserved
+[PASS] heap string value preserved
+[PASS] modification through deserialized pointer is visible
+[PASS] null pointer round-trip
+[PASS] distinct objects stay distinct
+[PASS] first object value preserved
+[PASS] second object value preserved
+[PASS] stack pointer round-trip
+[PASS] stack string value preserved
+[PASS] empty string preserved
+
+12 passed, 0 failed
