@@ -1,9 +1,9 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
-INFILES = main.cpp Bureaucrat.cpp Form.cpp
+INFILES = main.cpp Base.cpp A.cpp B.cpp C.cpp
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Form
+NAME = Base
 
 all: $(NAME)
 
