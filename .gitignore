@@ -1,4 +1,5 @@
 training/
 *.excalidraw
-pdfs/
 *.o
+*.pdf
+.vscode
