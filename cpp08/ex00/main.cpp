@@ -69,11 +69,10 @@ int main()
 	test(big, 199998, "big vector"); // last
 	test(big, 777, "big vector");    // odd, never there
 
-	// Uncomment after adding a const overload (returns const_iterator)
-	// std::cout << "\n===== const =====" << std::endl;
-	// const std::vector<int> cv(arr, arr + n);
-	// std::vector<int>::const_iterator cit = easyfind(cv, 42);
-	// std::cout << "const found " << *cit << std::endl;
+	std::cout << "\n===== const =====" << std::endl;
+	const std::vector<int> cv(arr, arr + n);
+	std::vector<int>::const_iterator cit = easyfind(cv, 42);
+	std::cout << "const found " << *cit << std::endl;
 
 	return 0;
 }

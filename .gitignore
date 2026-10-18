@@ -3,3 +3,6 @@ training/
 *.o
 *.pdf
 .vscode
+.clangd
+cpp08/ex00/easyfind
+cpp08/ex01/span
