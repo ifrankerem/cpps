@@ -6,3 +6,4 @@ training/
 .clangd
 cpp08/ex00/easyfind
 cpp08/ex01/span
+cpp08/ex02/mutantstack
